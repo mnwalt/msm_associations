@@ -1,2 +1,2 @@
-class Director < ApplicationRecord
+class Director < ActiveRecord::Base
 end
