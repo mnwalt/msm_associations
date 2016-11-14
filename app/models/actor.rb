@@ -1,4 +1,4 @@
-class Director < ActiveRecord::Base
+class Actor < ActiveRecord::Base
   # - name: must be present; must be unique in combination with dob
   validates :name, :presence => true, :uniqueness => { :scope => :dob }
 
@@ -6,5 +6,6 @@ class Director < ActiveRecord::Base
   # - bio: no rules
   # - image_url: no rules
 
-  has_many :movies
+  has_many :characters
+  has_many :movies, :through => :characters
 end
